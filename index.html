@@ -5,87 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Malla Curricular - Ingeniería en Sistemas</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f4fb;
-      margin: 0;
-      padding: 1rem;
-      color: #3a2e4f;
-    }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f4fb;
+    color: #3a2e4f;
+  }
 
-    h1 {
-      text-align: center;
-      color: #6a4c93;
-    }
+  h1 {
+    text-align: center;
+    color: #6a4c93;
+    margin: 0;
+    padding: 1rem 0 0.5rem;
+    flex-shrink: 0;
+  }
 
-    .grid {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      padding-bottom: 1rem;
-    }
+  .grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: calc(100% - 60px); /* Ajusta si tu header cambia de altura */
+    padding: 1rem;
+    box-sizing: border-box;
+  }
 
-    .column {
-      flex: 0 0 200px;
-      background-color: #ece2f0;
-      border-radius: 10px;
-      padding: 1rem;
-    }
+  .column {
+    flex: 0 0 200px;
+    background-color: #ece2f0;
+    border-radius: 10px;
+    padding: 1rem;
+  }
 
-    .column h2 {
-      text-align: center;
-      color: #5c3d79;
-    }
+  .column h2 {
+    text-align: center;
+    color: #5c3d79;
+  }
 
-    .materia {
-      margin: 0.5rem 0;
-      padding: 0.5rem;
-      border-radius: 6px;
-      background-color: #d6c2e6;
-      cursor: pointer;
-      position: relative;
-      transition: background-color 0.3s ease;
-    }
+  .materia {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background-color: #d6c2e6;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
 
-    .materia:hover {
-      background-color: #cbb2dd;
-    }
+  .materia:hover {
+    background-color: #cbb2dd;
+  }
 
-    .materia.aprobada {
-      background-color: #a084ca;
-      color: white;
-      text-decoration: line-through;
-    }
+  .materia.aprobada {
+    background-color: #a084ca;
+    color: white;
+    text-decoration: line-through;
+  }
 
-    .materia.bloqueada {
-      background-color: #eee5f3;
-      color: #aaa;
-      cursor: not-allowed;
-    }
+  .materia.bloqueada {
+    background-color: #eee5f3;
+    color: #aaa;
+    cursor: not-allowed;
+  }
 
-    .materia .tooltip {
-      visibility: hidden;
-      background-color: #5c3d79;
-      color: #fff;
-      text-align: center;
-      border-radius: 4px;
-      padding: 5px;
-      position: absolute;
-      z-index: 1;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0;
-      transition: opacity 0.3s;
-      white-space: nowrap;
-      font-size: 0.75rem;
-    }
+  .materia .tooltip {
+    visibility: hidden;
+    background-color: #5c3d79;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+    font-size: 0.75rem;
+  }
 
-    .materia:hover .tooltip {
-      visibility: visible;
-      opacity: 1;
-    }
-  </style>
+  .materia:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
 </head>
 <body>
   <h1>Malla Curricular - Ingeniería en Sistemas</h1>
